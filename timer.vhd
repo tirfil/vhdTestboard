@@ -16,7 +16,7 @@ entity TIMER is
 	port(
 		MCLK			: in	std_logic; -- 50 MHz
 		RSTN			: in	std_logic;
-		SEL30MS		    : out	std_logic; -- 100 ms
+		SEL30MS		    	: out	std_logic; -- 30 ms
 		SEL250MS		: out	std_logic  -- 250 ms
 	);
 end TIMER;
@@ -73,15 +73,16 @@ begin
 	
 end rtl;
 
--- pulse width
+-- 
 -- 20 ns
--- 0  =  20 ns;
--- 9  =  10.240 us;
--- 17 =   2.621440 ms;
--- 20 =  20.971520 ms
--- 21 =  41.943040 ms;
--- 22 =  83.886080 ms;
--- 23 = 167.772160 ms;
--- 25 = 671.088640 ms;
+-- period			half
+-- 0  =  40 ns;			20 ns
+-- 8  =  10.240 us;		5.120 us
+-- 16 =   2.621440 ms;		1.31072 ms;
+-- 19 =  20.971520 ms;		10,48576 ms;
+-- 20 =  41.943040 ms;		20.971520 ms;
+-- 21 =  83.886080 ms;		41.943040 ms;
+-- 22 = 167.772160 ms;
+-- 24 = 671.088640 ms;
 	
 	
